@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sklep.Pasek">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <top>
+                <VBox prefHeight="160.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <MenuBar nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#zamknij" BorderPane.alignment="CENTER">
+                            <menus>
+                                <Menu mnemonicParsing="false" text="File">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#zamknij" text="Zamknij" />
+                                    </items>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="Pomoc">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#powiadomienie" text="Informacje" />
+                                    </items>
+                                </Menu>
+                            </menus>
+                        </MenuBar>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="170.0">
+                           <children>
+                              <HBox prefHeight="25.0" prefWidth="176.0" />
+                              <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="0.0" prefWidth="200.0" />
+                              <Button mnemonicParsing="false" onAction="#wyszukiwarka" text="Cofnij">
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="275.0">
+                           <children>
+                              <Label fx:id="label" textFill="#58daee">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="70.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#odczyt" text="Dane użytkownika">
+                                 <VBox.margin>
+                                    <Insets left="75.0" top="25.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children></HBox>
+                    </children>
+                </VBox>
+            </top>
+            <center>
+                <VBox alignment="TOP_CENTER" prefHeight="204.0" prefWidth="601.0" BorderPane.alignment="CENTER">
+                    <children>
+                  <Label text="Koszyk" textFill="#1c8062">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                        <ListView fx:id="koszyczek" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="167.0" prefWidth="404.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                              <Button mnemonicParsing="false" onAction="#koszyccc" prefHeight="25.0" prefWidth="192.0" text="Dodaj przedmioty do koszyka">
+                           <HBox.margin>
+                              <Insets left="96.0" />
+                           </HBox.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#usun" text="Usuń wybrany przedmiot">
+                           <HBox.margin>
+                              <Insets left="65.0" />
+                           </HBox.margin></Button>
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

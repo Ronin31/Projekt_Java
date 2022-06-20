@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sklep.Pasek">
+   <top>
+          <VBox BorderPane.alignment="CENTER">
+              <children>
+                  <MenuBar nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#zamknij" BorderPane.alignment="CENTER">
+                      <menus>
+                          <Menu mnemonicParsing="false" text="File">
+                              <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#zamknij" text="Zamknij" />
+                              </items>
+                          </Menu>
+                          <Menu mnemonicParsing="false" text="Pomoc">
+                              <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#powiadomienie" text="Informacje" />
+                              </items>
+                          </Menu>
+                      </menus>
+                  </MenuBar>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                      <children>
+                          <VBox prefHeight="200.0" prefWidth="170.0">
+                              <children>
+                                  <HBox prefHeight="25.0" prefWidth="176.0">
+                                      <children>
+                                          <Label maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="60.0" text="Imie:" />
+                                          <TextField fx:id="imie" prefHeight="25.0" prefWidth="100.0" />
+                                      </children>
+                                  </HBox>
+                                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="0.0" prefWidth="200.0">
+                                      <children>
+                                          <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="60.0" text="Nazwisko:" />
+                                          <TextField fx:id="nazwisko" maxHeight="-Infinity" maxWidth="100.0" />
+                                      </children>
+                                  </HBox>
+                              </children>
+                          </VBox>
+                          <Button mnemonicParsing="false" onAction="#dane" prefHeight="25.0" prefWidth="74.0" text="Potwierdź" />
+                          <Label fx:id="label" textFill="#58daee">
+                              <HBox.margin>
+                                  <Insets left="25.0" />
+                              </HBox.margin>
+                              <font>
+                                  <Font name="System Bold" size="18.0" />
+                              </font>
+                  </Label>
+                      </children>
+            </HBox>
+              </children>
+          </VBox>
+   </top>
+   <left>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+                      <Button mnemonicParsing="false" onAction="#startowaScena" text="Przejdź do strony sklepu">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="200.0" top="20.0" />
+               </VBox.margin>
+                      </Button>
+            <VBox>
+               <children>
+                  <Label text="Administrator">
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox>
+                     <children>
+                        <Label text="Nick: " />
+                        <TextField fx:id="nick" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="120.0">
+                           <HBox.margin>
+                              <Insets left="6.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#admin" text="Potwierdź">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Hasło:" />
+                        <PasswordField fx:id="haslo" prefWidth="120.0">
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </PasswordField>
+                     </children>
+                  </HBox>
+                  <Button fx:id="przycisk" disable="true" mnemonicParsing="false" onAction="#dodawanko" text="Panel dodawania">
+                     <VBox.margin>
+                        <Insets left="200.0" top="50.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

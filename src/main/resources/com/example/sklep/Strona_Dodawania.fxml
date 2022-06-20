@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sklep.Pasek">
+    <top>
+        <VBox alignment="CENTER" prefHeight="307.0" prefWidth="451.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <BorderPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0">
+                <top>
+                    <MenuBar nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#zamknij" BorderPane.alignment="CENTER">
+                        <menus>
+                            <Menu mnemonicParsing="false" text="File">
+                                <items>
+
+                                    <MenuItem mnemonicParsing="false" onAction="#zamknij" text="Zamknij" />
+                                </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Pomoc">
+                                <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#powiadomienie" text="Informacje" />
+                                </items>
+                            </Menu>
+                        </menus>
+                    </MenuBar>
+                </top>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+                <left>
+                    <HBox BorderPane.alignment="CENTER">
+                        <children>
+                            <Button mnemonicParsing="false" onAction="#startowaScena" text="Wróć ">
+                                <HBox.margin>
+                                    <Insets left="3.0" />
+                                </HBox.margin></Button>
+                        </children></HBox>
+                </left>
+                <center>
+                    <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                        <children>
+                            <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Dodaj telewizor">
+                                <font>
+                                    <Font size="18.0" />
+                                </font>
+                            </Label>
+                            <Separator prefWidth="200.0">
+                                <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                </VBox.margin>
+                            </Separator>
+                            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="17.0" prefWidth="257.0">
+                                <children>
+                                    <Label prefHeight="17.0" prefWidth="81.0" text="Rozdzielczość" />
+                                    <RadioButton mnemonicParsing="false" selected="true" text="FHD">
+                              <toggleGroup>
+                                 <ToggleGroup fx:id="g8" />
+                              </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="UHD" toggleGroup="$g8" />
+                                    <RadioButton mnemonicParsing="false" text="4K" toggleGroup="$g8" />
+                                </children>
+                            </HBox>
+                            <Separator prefWidth="200.0">
+                                <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                </VBox.margin>
+                            </Separator>
+                            <HBox prefHeight="100.0" prefWidth="200.0">
+                                <children>
+                           <Label text="Wielkość: " />
+                           <TextField fx:id="wielk" />
+                                </children>
+                            </HBox>
+                            <VBox prefHeight="200.0" prefWidth="100.0">
+                                <children>
+                                    <Separator prefWidth="200.0">
+                                        <VBox.margin>
+                                            <Insets bottom="5.0" top="5.0" />
+                                        </VBox.margin>
+                                    </Separator>
+                                    <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="200.0">
+                                        <children>
+                                            <RadioButton mnemonicParsing="false" selected="true" text="LCD">
+                                    <toggleGroup>
+                                       <ToggleGroup fx:id="g9" />
+                                    </toggleGroup>
+                                            </RadioButton>
+                                            <RadioButton mnemonicParsing="false" text="QLED" toggleGroup="$g9" />
+                                        </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0">
+                                        <VBox.margin>
+                                            <Insets bottom="5.0" left="5.0" top="5.0" />
+                                        </VBox.margin>
+                                    </Separator>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                        <children>
+                                            <RadioButton mnemonicParsing="false" selected="true" text="Samsung">
+                                    <toggleGroup>
+                                       <ToggleGroup fx:id="g10" />
+                                    </toggleGroup></RadioButton>
+                                            <RadioButton mnemonicParsing="false" text="Sony" toggleGroup="$g10" />
+                                            <RadioButton mnemonicParsing="false" text="LG" toggleGroup="$g10" />
+                                        </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0">
+                                        <VBox.margin>
+                                            <Insets bottom="5.0" top="5.0" />
+                                        </VBox.margin>
+                                    </Separator>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                        <children>
+                                            <CheckBox id="HDR" fx:id="HDR1" mnemonicParsing="false" text="HDR" />
+                                        </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0">
+                                        <VBox.margin>
+                                            <Insets bottom="5.0" top="5.0" />
+                                        </VBox.margin>
+                                    </Separator>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                        <children>
+                                            <CheckBox id="SmartTV" fx:id="SmartTV1" mnemonicParsing="false" text="SmartTV" />
+                                        </children>
+                                    </HBox>
+                                    <Separator prefWidth="200.0">
+                                        <VBox.margin>
+                                            <Insets bottom="5.0" top="5.0" />
+                                        </VBox.margin>
+                                    </Separator>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                        <children>
+                                            <CheckBox id="WIFI" fx:id="WIFI1" mnemonicParsing="false" text="WiFi" />
+                                        </children>
+                                    </HBox>
+                           <Separator prefWidth="200.0" />
+                           <HBox prefHeight="100.0" prefWidth="200.0">
+                              <children>
+                                 <Label text="Cena: " />
+                                 <TextField fx:id="cena" />
+                              </children>
+                           </HBox>
+                                </children>
+                            </VBox>
+                        </children>
+                    </VBox>
+                </center>
+                <right>
+
+                </right>
+            </BorderPane>
+            <Button onAction="#dodanie" text="Dodaj" />
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </VBox>
+    </top>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+    </center>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <bottom>
+        <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+            <opaqueInsets>
+                <Insets bottom="30.0" />
+            </opaqueInsets>
+        </VBox>
+    </bottom>
+</BorderPane>

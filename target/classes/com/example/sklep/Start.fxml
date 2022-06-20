@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sklep.Pasek">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <top>
+            <VBox prefHeight="160.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                   <MenuBar nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#zamknij" BorderPane.alignment="CENTER">
+                       <menus>
+                           <Menu mnemonicParsing="false" text="File">
+                               <items>
+                                   <MenuItem mnemonicParsing="false" onAction="#zamknij" text="Zamknij" />
+                               </items>
+                           </Menu>
+
+                           <Menu mnemonicParsing="false" text="Pomoc">
+                               <items>
+                                   <MenuItem mnemonicParsing="false" onAction="#powiadomienie" text="Informacje" />
+                               </items>
+                           </Menu>
+                       </menus>
+                   </MenuBar>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="230.0" text="Telewizory u leśniczego" textFill="#2ecd4b" textOverrun="CENTER_WORD_ELLIPSIS">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" />
+                  <Label text="Historia sklepu:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="598.0" text="Pierwszy sklep z sieci sklepów u leśniczego powstał w 1958 roku. Jesteśmy prężnie rozwijającą się marką, która" />
+                  <Label text="posiada już 20 sklepów pod swoją marką. " />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="34.0" prefWidth="562.0" text="Nasza aktualna oferta obejmuje następujące telewizory:" textFill="#1bab31">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="204.0" prefWidth="601.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#telewizory" prefHeight="10.0" prefWidth="101.0" text="Wyświetl ofertę">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></Button>
+                  <ListView fx:id="wyszukiwarka" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="194.0" prefWidth="404.0" />
+                  <Button mnemonicParsing="false" onAction="#wyszukiwarka" text="Przejdź do wyszukiwania" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
